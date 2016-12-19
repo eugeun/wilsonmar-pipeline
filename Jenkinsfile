@@ -16,7 +16,7 @@ import java.net.URL
 try {
 	node {
 		stage ('Stage 1') {
-			echo "\u2600 BUILD_URL=${BUILD_URL}"
+			echo "\u2600 BUILD_URL=${env.BUILD_URL}"
 		}
 		
 		def workspace = pwd()
