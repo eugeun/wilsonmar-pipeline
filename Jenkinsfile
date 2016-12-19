@@ -47,7 +47,8 @@ catch (exc) {
 }
 
  // Must re-throw exception to propagate error:
+ /*
  if (exc) {
      throw exc
- }
+ }*/
 }
