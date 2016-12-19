@@ -14,17 +14,17 @@ import groovy.json.JsonOutput
 import java.net.URL
  
 try {
-node {
-stage ('Stage 1') {
-	echo "\u2600 BUILD_URL=${env.BUILD_URL}"
-}
-
-def workspace = pwd()
-echo "\u2600 workspace=${workspace}"
- 
-stage ('Stage 2' ) {
-}
-} // node
+	node {
+		stage ('Stage 1') {
+			echo "\u2600 BUILD_URL=${env.BUILD_URL}"
+		}
+		
+		def workspace = pwd()
+		echo "\u2600 workspace=${workspace}"
+		
+		stage ('Stage 2' ) {
+		}
+	} // node
 } // try end
 catch (exc) {
 /*
@@ -38,7 +38,7 @@ catch (exc) {
  from: 'noreply@ci.jenkins.io'
 */
 } finally {
-  
+ /* 
  (currentBuild.result != "ABORTED") && node("base") {
      // Send e-mail notifications for failed or unstable builds.
      // currentBuild.result must be non-null for this step to work.
@@ -46,7 +46,7 @@ catch (exc) {
         notifyEveryUnstableBuild: true,
         recipients: "${email_to}",
         sendToIndividuals: true])
- }
+ }*/
  
  // Must re-throw exception to propagate error:
  if (err) {
