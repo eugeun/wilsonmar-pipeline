@@ -27,7 +27,6 @@ try {
 	} // node
 } // try end
 catch (exc) {
-/*
  err = caughtError
  currentBuild.result = "FAILURE"
  String recipient = 'infra@lists.jenkins-ci.org'
@@ -36,9 +35,7 @@ catch (exc) {
            to: recipient,
       replyTo: recipient,
  from: 'noreply@ci.jenkins.io'
-*/
 } finally {
- /* 
  (currentBuild.result != "ABORTED") && node("base") {
      // Send e-mail notifications for failed or unstable builds.
      // currentBuild.result must be non-null for this step to work.
@@ -46,8 +43,7 @@ catch (exc) {
         notifyEveryUnstableBuild: true,
         recipients: "${email_to}",
         sendToIndividuals: true])
- }*/
- 
+
  // Must re-throw exception to propagate error:
  if (err) {
      throw err
