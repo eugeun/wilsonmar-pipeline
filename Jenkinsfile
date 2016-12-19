@@ -15,14 +15,14 @@ import java.net.URL
  
 try {
 	node {
-		stage ('Stage 1') {
+		stage ('\u2776 Stage 1') {
 			echo "\u2600 BUILD_URL=${env.BUILD_URL}"
 		}
 		
 		def workspace = pwd()
 		echo "\u2600 workspace=${workspace}"
 		
-		stage ('Stage 2' ) {
+		stage ('\u2777 Stage 2' ) {
 		}
 	} // node
 } // try end
