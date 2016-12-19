@@ -44,10 +44,10 @@ catch (exc) {
         notifyEveryUnstableBuild: true,
         recipients: "Evgenii_Pomnikov@epam.com",
         sendToIndividuals: true])
+}
 
  // Must re-throw exception to propagate error:
- if (exc) {
-     throw exc
+ if (err) {
+     throw err
  }
-}
 }
