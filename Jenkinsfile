@@ -19,8 +19,8 @@ try {
 		}
 		
 		def workspace = pwd()
+		echo "\u2600 BUILD_URL=${BUILD_URL}"
 		echo "\u2600 workspace=${WORKSPACE}"
-		env
 		
 		stage ('Stage 2' ) {
 		// just a comment
