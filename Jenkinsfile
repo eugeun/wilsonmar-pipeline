@@ -19,11 +19,10 @@ try {
 			echo "\u2600 BUILD_URL=" + env.BUILD_URL
 		}
 		
-		def workspace = pwd()
-		echo "\u2600 workspace=${WORKSPACE}"
-		
 		stage ('Stage 2' ) {
-		// just a comment
+		
+			def workspace = pwd()
+			echo "\u2600 workspace=${WORKSPACE}"
 		}
 	} // node
 } // try end
