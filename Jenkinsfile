@@ -16,13 +16,12 @@ import java.net.URL
 try {
 	node {
 		stage ('Stage 1') {
-			echo "\u2600 BUILD_URL=" + env.BUILD_URL
+			echo "BUILD_URL=${env.BUILD_URL}"
 		}
 		
 		stage ('Stage 2' ) {
-		
 			def workspace = pwd()
-			echo "\u2600 workspace=${WORKSPACE}"
+			echo "workspace=${WORKSPACE}"
 		}
 	} // node
 } // try end
